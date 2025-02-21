@@ -4,10 +4,12 @@ import sys
 
 # from common import print_hello
 from first_snowpark_project.app import common
+
 from snowflake.snowpark import Session
 
 
 def hello_procedure(session: Session, name: str) -> str:
+    # return common.print_hello(name)
     return common.print_hello(name)
 
 
