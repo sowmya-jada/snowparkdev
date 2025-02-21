@@ -2,17 +2,22 @@ from __future__ import annotations
 
 import sys
 
-from common import print_hello
+# from common import print_hello
+from first_snowpark_project.app import common
+
 from snowflake.snowpark import Session
 
 
 def hello_procedure(session: Session, name: str) -> str:
-    return print_hello(name)
+    # return common.print_hello(name)
+    return common.print_hello(name)
 
 
 def test_procedure(session: Session) -> str:
     return "Test procedure"
 
+def test_procedure_two(session: Session) -> str:
+    return "Test procedure two"
 
 # For local debugging
 # Beware you may need to type-convert arguments if you add input parameters
